@@ -1,10 +1,11 @@
 (function(){
     let screen = document.querySelector('.screen');
     let buttons = document.querySelectorAll('.btn');
-    let clear = document.querySelector('.clear');
+    let clear = document.getElementById('btnClear');
     // let equal = document.querySelector('.equal');
-    let equal = document.getElementById('#btnEqual');
-    console.log(equal);
+    let equal = document.getElementById('btnEqual');
+    console.log(eval(screen.value));
+
 
     // many buttons inside .btn so to find out which button was pressed, use loop
     buttons.forEach(function(button){
@@ -17,7 +18,7 @@
         })
     });
 
-    equal.addEventListener('click',function(e){
+    btnEqual.addEventListener("click",function(e){
         if (screen.value === ''){
             screen.value = "Please enter";
         }else{
